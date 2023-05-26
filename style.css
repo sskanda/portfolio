@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    color: #091434;
+}
+
+html {
+    font-size: 62.5%;
+    background-color: rgb(253, 251, 247);
+
+}
+
+header {
+    position: absolute;
+    display: flex;
+    /* background-color: rgb(230, 156, 73); */
+    padding: 3rem 20rem 3rem 3rem;
+    width: 100%;
+    justify-content: end;
+    /* background-color: white; */
+    align-items: center;
+    /* z-index: 100; */
+}
+
+.profile-image {
+    background-color: #ff923e;
+    border-radius: 50%;
+    min-height: 200px;
+}
+
+.navbar {
+    position: fixed;
+    display: flex;
+    gap: 4rem;
+    /* transform: translate(0%); */
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.navbar>a {
+    display: inline-block;
+    position: relative;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #091434;
+}
+
+.navbar>a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff923e;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.navbar>a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.box-menu {
+    /* position: relative;
+    left: 90vw; */
+    visibility: hidden;
+    position: relative;
+
+    left: 19rem;
+}
+
+.fa-solid {
+    font-size: 4rem;
+    color: white;
+    padding: 1rem;
+    background-color: #ff923e;
+    border-radius: 1rem;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 2% 2rem;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 3rem;
+    padding-left: 2rem;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+/* .home-content {
+    display: flex;
+
+} */
+
+.profile-image {
+    display: flex;
+    flex: 1;
+}
+
+
+@media (max-width: 1500px) {
+    .box-menu {
+        visibility: visible;
+    }
+
+    /* .navbar>a {
+        display: block;
+    } */
+
+    /* .navbar {
+        display: none;
+    } */
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 40rem;
+        transform: translate(100%);
+        /* left: 60%; */
+        /* inset: 0 0 0 30%; */
+        background-color: white;
+        transition: 0.2s;
+    }
+
+    .home-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+    }
+
+
+
+}
+
+
+
+.nav-active {
+    transform: translate(0%);
+}
