@@ -4,14 +4,25 @@ const boxmenu = document.querySelector('.box-menu');
 const navbar = document.querySelector('.navbar');
 const icon = document.querySelector('.fa-solid');
 const cursor = document.querySelector('.cursor');
+const cursorBorder = document.querySelector("#cursor-border");
+const cursorPosition = { x: 0, y: 0 };
+const cursorBorderPosition = { x: 0, y: 0 };
 
-document.addEventListener('mousemove', function (e) {
-    let x = e.pageX;
-    let y = e.pageY;
-    cursor.style.top = y + "px";
-    cursor.style.left = x + "px";
-})
+document.addEventListener("mousemove", (e) => {
+    cursorPosition.x = e.clientX;
+    cursorPosition.y = e.clientY;
 
+    cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+});
+
+requestAnimationFrame(function loop() {
+    const easting = 8;
+    cursorBorderPosition.x += (cursorPosition.x - cursorBorderPosition.x) / easting;
+    cursorBorderPosition.y += (cursorPosition.y - cursorBorderPosition.y) / easting;
+
+    cursorBorder.style.transform = `translate(${cursorBorderPosition.x}px, ${cursorBorderPosition.y}px)`;
+    requestAnimationFrame(loop);
+});
 
 
 // window.addEventListener('click', function () {

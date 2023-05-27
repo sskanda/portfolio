@@ -30,32 +30,49 @@ header {
     /* background-color: white; */
     align-items: center;
     /* z-index: 100; */
+    /* background-color: coral; */
 }
 
 
 
 .cursor {
-    z-index: 999;
-    height: 15px;
-    width: 15px;
-    background-color: purple;
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: -5px;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(221, 10, 221);
     border-radius: 50%;
     pointer-events: none;
-    /* box-shadow: 0 0 20px #ff923e, 0 0 40px #ff923e, 0 0 60px #ff923e; */
-    transition: height 200ms, width 200ms, border-color 200ms, border-width 200ms;
+    z-index: 999;
+    /* transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out,
+        height 0.15s ease-out, background-color 0.15s ease-out; */
+}
+
+#cursor-border {
+    --size: 50px;
+    position: fixed;
+    top: calc(var(--size) / -2);
+    left: calc(var(--size) / -2);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgb(221, 10, 221);
+    ;
+    pointer-events: none;
+    transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out,
+        height 0.15s ease-out, background-color 0.15s ease-out;
+    z-index: 999;
 }
 
 .ripple {
     width: 10px;
     height: 10px;
-    background-color: purple;
+    background-color: rgb(221, 10, 221);
     position: fixed;
     border-radius: 50%;
     border: 1px solid #ffffff59;
+
 }
 
 @keyframes ripple-effect {
@@ -65,34 +82,6 @@ header {
     }
 }
 
-/* @keyframes ripple-effect {
-    to {
-        width: 100px;
-        height: 100px;
-        background: transparent;
-        opacity: 0.1;
-    }
-
-    to {
-        transform: scale(5);
-        opacity: 0.01;
-    }
-} */
-
-
-/* .cursor::before {
-    content: '';
-    width: 50px;
-    height: 50px;
-    background-color: #ff923e;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    opacity: 0.2;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    
-} */
 
 
 
@@ -123,6 +112,7 @@ header {
     position: fixed;
     display: flex;
     gap: 4rem;
+    top: 6rem;
     /* transform: translate(0%); */
     /* justify-content: center;
     align-items: center; */
@@ -158,9 +148,10 @@ header {
     /* position: relative;
     left: 90vw; */
     visibility: hidden;
-    position: relative;
+    position: fixed;
 
-    left: 19rem;
+    right: 2rem;
+    top: 2rem;
 }
 
 .fa-solid {
@@ -259,4 +250,65 @@ section {
 
 .nav-active {
     transform: translate(0%);
+}
+
+/* -----about page */
+
+#about {
+    background-color: rgb(235, 230, 219);
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+
+}
+
+.about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+
+
+}
+
+.about-image img {
+    border-style: solid;
+    border-color: #ff923e;
+    border-radius: 50%;
+}
+
+.outer-ring {
+    height: 180px;
+    width: 180px;
+    position: absolute;
+    border-radius: 50%;
+    border-style: solid;
+    border-right: 2px solid #ff923e;
+    border-left: 2px solid #ff923e;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    animation: ring 2s linear infinite;
+}
+
+@keyframes ring {
+    0% {
+        transform: rotate(0deg);
+        /* box-shadow: 1px 5px 2px purple; */
+    }
+
+    50% {
+        transform: rotate(180deg);
+        /* box-shadow: 1px 5px 2px #18b201; */
+    }
+
+    100% {
+        transform: rotate(360deg);
+        /* box-shadow: 1px 5px 2px #0456c8; */
+    }
+}
+
+.about-image img {
+    position: relative;
+    left: 0px;
+    top: 0px;
 }
