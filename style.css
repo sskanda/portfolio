@@ -38,7 +38,7 @@ header {
     z-index: 999;
     height: 15px;
     width: 15px;
-    background-color: #ff923e;
+    background-color: purple;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -49,20 +49,35 @@ header {
     transition: height 200ms, width 200ms, border-color 200ms, border-width 200ms;
 }
 
+.ripple {
+    width: 10px;
+    height: 10px;
+    background-color: purple;
+    position: fixed;
+    border-radius: 50%;
+    border: 1px solid #ffffff59;
+}
 
 @keyframes ripple-effect {
-    /* to {
+    to {
+        transform: scale(15);
+        opacity: 0.01;
+    }
+}
+
+/* @keyframes ripple-effect {
+    to {
         width: 100px;
         height: 100px;
         background: transparent;
         opacity: 0.1;
-    } */
+    }
 
     to {
         transform: scale(5);
         opacity: 0.01;
     }
-}
+} */
 
 
 /* .cursor::before {

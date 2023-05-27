@@ -48,3 +48,26 @@ boxmenu.addEventListener('click', function () {
 // document.addEventListener('resize', function () {
 //     console.log('screen changed');
 // })
+
+
+//ripple effect---
+
+window.addEventListener('click', function (e) {
+    applyCursorRippleEffect(e);
+})
+
+function applyCursorRippleEffect(e) {
+    const ripple = document.createElement("div");
+
+    ripple.className = "ripple";
+    document.body.appendChild(ripple);
+
+    ripple.style.left = `${e.clientX}px`;
+    ripple.style.top = `${e.clientY}px`;
+    ripple.style.animation = `ripple-effect 1s  linear`;
+    ripple.onanimationend = () => {
+        document.body.removeChild(ripple);
+
+    }
+
+}
