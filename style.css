@@ -9,10 +9,13 @@
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
     color: #091434;
+    /* cursor: none; */
 }
 
 html {
-    font-size: 62.5%;
+    /* font-size: 62.5%; */
+    font-size: 0.52115905774vw;
+    /* background-color: rgb(8, 8, 8); */
     background-color: rgb(253, 251, 247);
 
 }
@@ -28,6 +31,55 @@ header {
     align-items: center;
     /* z-index: 100; */
 }
+
+
+
+.cursor {
+    z-index: 999;
+    height: 15px;
+    width: 15px;
+    background-color: #ff923e;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    pointer-events: none;
+    /* box-shadow: 0 0 20px #ff923e, 0 0 40px #ff923e, 0 0 60px #ff923e; */
+    transition: height 200ms, width 200ms, border-color 200ms, border-width 200ms;
+}
+
+
+@keyframes ripple-effect {
+    /* to {
+        width: 100px;
+        height: 100px;
+        background: transparent;
+        opacity: 0.1;
+    } */
+
+    to {
+        transform: scale(5);
+        opacity: 0.01;
+    }
+}
+
+
+/* .cursor::before {
+    content: '';
+    width: 50px;
+    height: 50px;
+    background-color: #ff923e;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0.2;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    
+} */
+
+
 
 .profile-image {
     background-color: #ff923e;
@@ -115,11 +167,11 @@ section {
     align-items: center;
 }
 
-h1 {
+.h1 {
     font-size: 6rem;
 }
 
-h2 {
+.h2 {
     font-size: 3rem;
     padding-left: 2rem;
 }
@@ -144,6 +196,10 @@ h2 {
 
 
 @media (max-width: 1500px) {
+    html {
+        font-size: 0.5rem;
+    }
+
     .box-menu {
         visibility: visible;
     }
