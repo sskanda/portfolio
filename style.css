@@ -41,7 +41,7 @@ header {
     left: -5px;
     width: 10px;
     height: 10px;
-    background-color: rgb(221, 10, 221);
+    background-color: rgb(52, 191, 255);
     border-radius: 50%;
     pointer-events: none;
     z-index: 999;
@@ -57,7 +57,7 @@ header {
     width: var(--size);
     height: var(--size);
     border-radius: 50%;
-    box-shadow: 0 0 0 1px rgb(221, 10, 221);
+    box-shadow: 0 0 0 1px rgb(52, 191, 255);
     ;
     pointer-events: none;
     transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out,
@@ -68,7 +68,7 @@ header {
 .ripple {
     width: 10px;
     height: 10px;
-    background-color: rgb(221, 10, 221);
+    background-color: rgb(52, 191, 255);
     position: fixed;
     border-radius: 50%;
     border: 1px solid #ffffff59;
@@ -374,4 +374,50 @@ section {
 #js-img {
     width: 65px;
 
+}
+
+/* ------work----- */
+#work {
+
+    background-color: #5f574c2a;
+}
+
+.work-header {
+    font-size: 6rem;
+    margin-left: 5rem;
+    font-weight: 500;
+}
+
+.project-card-container {
+    display: flex;
+    justify-content: center;
+}
+
+.project-card {
+    height: 57rem;
+    width: 35rem;
+    padding: 0.8rem;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card>div {
+    overflow-y: hidden;
+    flex: 1;
+}
+
+
+
+.project-image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
 }
