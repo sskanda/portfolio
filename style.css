@@ -386,11 +386,13 @@ section {
     font-size: 6rem;
     margin-left: 5rem;
     font-weight: 500;
+    margin-bottom: 5rem;
 }
 
 .project-card-container {
     display: flex;
     justify-content: center;
+    gap: 80px;
 }
 
 .project-card {
@@ -420,4 +422,87 @@ section {
 .project-info {
     display: flex;
     flex-direction: column;
+    padding: 1.6rem 1rem;
+}
+
+
+
+
+.project-name {
+    /* margin-top: 2rem; */
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.project-stack {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.js-stack {
+    border: 0.1rem solid transparent;
+    border-radius: 10px;
+    padding: 0.1rem 0.7rem;
+    background-color: #ffb800;
+    color: white;
+
+}
+
+.html-stack {
+    border: 0.1rem solid #7C8594;
+    border-radius: 10px;
+    padding: 0.1rem 0.7rem;
+    color: #7C8594;
+}
+
+.css-stack {
+    border: 0.1rem solid #7C8594;
+    border-radius: 10px;
+    padding: 0.1rem 0.7rem;
+    color: #7C8594;
+
+}
+
+.project-about {
+    color: #7C8594;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+.project-redirect {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: end;
+    gap: 10px;
+    /* align-items: end; */
+}
+
+.github-redirect i {
+    padding: 1rem 2rem;
+    background-color: #7C8594;
+    font-size: 30px;
+    color: white;
+    border-radius: 13px;
+}
+
+.live-redirect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background-color: #ff923e;
+    color: white;
+    height: 39px;
+    margin-bottom: 10px;
+    border-radius: 13px;
+
+}
+
+.live-redirect div {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 500;
 }
