@@ -82,3 +82,74 @@ function applyCursorRippleEffect(e) {
     }
 
 }
+
+///test///
+// const left = document.querySelectorAll('.left-navigate');
+// const right = document.querySelectorAll('.right-navigate');
+// const cardcontainer = document.querySelectorAll('.project-card-container');
+// const card1 = document.querySelector('.card-1');
+// const cards = document.querySelectorAll('.project-card');
+// console.log(cards);
+// let leftindex = 0;
+// let rightindex = 0;
+// cardcontainer.forEach((item, i) => {
+//     let containerDimensions = item.getBoundingClientRect();
+//     let containerWidth = containerDimensions.width;
+
+//     left[i].addEventListener('click', () => {
+//         leftindex++;
+//         card1.style.right = "350px";
+//     })
+
+//     right[i].addEventListener('click', () => {
+//         rightindex++;
+//         card1.style.transform = `translateX(${350}px)`;
+//     })
+// })
+
+
+
+
+
+
+
+// left.addEventListener('click', function () {
+//     console.log("left clicked");
+//     let carddimension = card1.getBoundingClientRect();
+//     console.log(carddimension);
+//     let cardwidth = carddimension.width;
+//     console.log(cardwidth);
+//     card1.scrollLeft = cardwidth;
+//     // card1.style.transform = "translateX(-100px)"
+
+
+// })
+
+// right.addEventListener('click', function () {
+//     console.log("right clicked");
+
+// })
+
+//test parent///
+// const usernameinput = document.querySelectorAll('.usernameinput');
+
+// for (let q = 0; q < usernameinput.length; q++) {
+//     var parent = usernameinput[q].parentElement;
+//     usernameinput[q].addEventListener('focus', function () {
+//         console.log(parent);
+//         parent.style.borderColor = "red";
+
+//         console.log("focused");
+//     })
+// }
+
+
+// var parent = child.parentElement;
+// console.log(parent);
+
+// child.addEventListener('focus', function () {
+//     console.log(parent);
+//     parent.style.borderColor = "red";
+
+//     console.log("focused");
+// })
